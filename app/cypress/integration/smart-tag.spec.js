@@ -10,4 +10,10 @@ describe('Modal test', () => {
         cy.dataCy('tag').should('be.visible');
     })
 
+    it("should delete tag", () => {
+        cy.dataCy('seeMore').trigger('mouseover');
+        cy.dataCy('tag').should('be.visible');
+        cy.get('body').click(0,0);
+        cy.dataCy('tag').should('not.be.visible');
+    })
 })

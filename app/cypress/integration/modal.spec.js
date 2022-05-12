@@ -9,4 +9,11 @@ describe('Modal test', () => {
         cy.dataCy('openModal').click();
         cy.dataCy('openModal').should('be.visible');
     })
+
+    it("should close the modal window", () => {
+        cy.dataCy('openModal').click();
+        cy.dataCy('openModal').should('be.visible');
+        cy.get('body').click(0,0);
+        cy.dataCy('closeModal').should('not.be.visible')
+    })
 })

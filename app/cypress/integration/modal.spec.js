@@ -16,4 +16,10 @@ describe('Modal test', () => {
         cy.get('body').click(0,0);
         cy.dataCy('closeModal').should('not.be.visible')
     })
+
+    it("should contain an <h2> with Lorem Ipsum", () => {
+        cy.dataCy('openModal').click();
+        cy.dataCy('openModal').should('be.visible');
+        cy.dataCy('modal').find('h2').should('have.text', 'Lorem Ipsum');
+    })
 })

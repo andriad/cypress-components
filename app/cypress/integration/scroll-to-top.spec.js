@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Modal test', () => {
+describe('Scroll to top test', () => {
     beforeEach(() => {
       cy.visit('../js/scroll-to-top.html');
     })

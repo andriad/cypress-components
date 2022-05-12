@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Modal test', () => {
+describe('Smart-tag test', () => {
     beforeEach(() => {
       cy.visit('../js/smart-tag.html');
     })

@@ -8,6 +8,9 @@ describe('Modal test', () => {
     it("should open the modal window", () => {
         cy.dataCy('scroll').click();
         cy.dataCy('scrollTo').should('be.visible');
+        cy.dataCy('scrollTo').click();
+        cy.dataCy('scrollTo').should('not.be.visible');
+        cy.window().its('scrollY').should('equal', 0);
     })
 
 })
